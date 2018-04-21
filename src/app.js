@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-const App = () => {
-  return (
-    <div>
-      <p>React here!</p>
-    </div>
-  );
-};
+import Title from "./title";
+import Search from "./search";
+import Results from "./results";
+
+const App = () => 
+<div>
+    <Title title={'todos'}/>
+    <Search />
+    <Results />
+</div>;
+
 export default App;
-ReactDOM.render(<App />, document.getElementById("app"));

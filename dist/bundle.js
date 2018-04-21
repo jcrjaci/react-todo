@@ -19102,7 +19102,7 @@ if (false) {} else {
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -19113,22 +19113,31 @@ var _reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/i
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _title = __webpack_require__(/*! ./title */ "./src/title.js");
+
+var _title2 = _interopRequireDefault(_title);
+
+var _search = __webpack_require__(/*! ./search */ "./src/search.js");
+
+var _search2 = _interopRequireDefault(_search);
+
+var _results = __webpack_require__(/*! ./results */ "./src/results.js");
+
+var _results2 = _interopRequireDefault(_results);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(
-      "p",
-      null,
-      "React here!"
-    )
-  );
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(_title2.default, { title: 'todos' }),
+        _react2.default.createElement(_search2.default, null),
+        _react2.default.createElement(_results2.default, null)
+    );
 };
-exports.default = App;
 
-_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById("app"));
+exports.default = App;
 
 /***/ }),
 
@@ -19142,13 +19151,130 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
 "use strict";
 
 
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
 var _App = __webpack_require__(/*! ./App */ "./src/App.js");
 
 var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log('cenas');
+_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById("app"));
+
+/***/ }),
+
+/***/ "./src/results.js":
+/*!************************!*\
+  !*** ./src/results.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Results = function Results() {
+  return _react2.default.createElement(
+    "div",
+    null,
+    "List of Results"
+  );
+};
+
+exports.default = Results;
+
+/***/ }),
+
+/***/ "./src/search.js":
+/*!***********************!*\
+  !*** ./src/search.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Search = function Search() {
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement("input", { type: "text" })
+    );
+};
+
+exports.default = Search;
+
+/***/ }),
+
+/***/ "./src/title.js":
+/*!**********************!*\
+  !*** ./src/title.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Title = function Title(_ref) {
+    var title = _ref.title;
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "span",
+            null,
+            title
+        )
+    );
+};
+
+exports.default = Title;
 
 /***/ })
 
